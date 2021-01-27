@@ -1,0 +1,29 @@
+{
+  "name": "simultan",
+  "version": "1.0.0",
+  "repository": "terkelg/simultan",
+  "description": "Simultaneously run an async function on any iterable with limited concurrency",
+  "license": "MIT",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "engines": {
+    "node": ">=11"
+  },
+  "files": [
+    "lib"
+  ],
+  "author": {
+    "name": "Terkel Gjervig",
+    "email": "terkel@terkel.com",
+    "url": "https://terkel.com"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "test": "tsc --noEmit && uvu test"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3",
+    "uvu": "^0.5.1"
+  }
+}
